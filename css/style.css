@@ -57,9 +57,9 @@ header {
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px){
     .container {
-        width: 780px;
+        width: 720px;
     }
 }
 
@@ -82,16 +82,24 @@ header {
     
 }
 
-
 /* SECTION: my Framework began */
 
 .container {
     margin: auto;
+    /* margin-left: 15px;
 }
 
 .text-center {
     text-align: center;
 }
 
+.head-size {
+    font-size: 2rem;
+}
+
+.visible-md,
+.visible-lg,
+.visible-xlg {
+    display: none;
 
 /* my Framework end */
