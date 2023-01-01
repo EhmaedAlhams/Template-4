@@ -119,6 +119,7 @@ header {
 /* began section about us */
 
 .about-us {
+    margin-bottom: 30px;
     padding: 25px;
     background-color: #ececec;
     font-size: 30px;
@@ -132,6 +133,45 @@ header {
     }
 }
 /* end  section about us */
+
+/* began section our works */
+
+@media (min-width: 1200px) {
+    .our-works .gallery{
+        width: 25%;
+    }
+
+    .our-works .gallery img{
+        width: 421px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .our-works .gallery{
+        width: 33.3333%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .our-works .gallery{
+        width: 50%;
+    }
+}
+
+.our-works .gallery img {
+    width: 100%;
+}
+
+.btn {
+    margin: 30px 20px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 13px 30px;
+}
+/* end section our works */
 
 
 /* Small devices (landscape phones, 576px and up) */
@@ -194,6 +234,10 @@ header {
 
 .clearfix {
     clear: both;
+}
+
+.float-left {
+    float: left;
 }
 
 /* my Framework end */
