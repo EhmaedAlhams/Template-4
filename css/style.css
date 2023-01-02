@@ -173,6 +173,76 @@ header {
 }
 /* end section our works */
 
+/* began section Pricing Plans/Table  */
+
+.pricing-table {
+    background-color: #666;
+    color: #FFF;
+    padding: 50px 0;
+}
+
+.pricing-table .head-size {
+    margin: 0 0 35px;
+}
+
+.pricing-table .pricing-plan {
+    /* width: 33.3333%; */
+    border: 1px solid #FFF;
+    padding: 20px 0;
+    position: relative;
+}
+
+.pricing-table .pricing-plan h3 {
+    margin: 0 0 10px;
+    font-size: 26px;
+}
+
+.pricing-table .pricing-plan .pricing {
+    display: inline-block;
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #bfbfbf;
+}
+
+.pricing-table .pricing-plan ul {
+    line-height: 2;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .pricing-table .pricing-plan {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .pricing-table .pricing-plan {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .pricing-table .pricing-plan:not(.ultimate) {
+        margin-right: 1%;
+    }
+
+    .pricing-table .pricing-plan {
+        width: 32.66666%;
+    }
+
+    .pricing-table .pricing-plan.plus {
+        left: 33.66666%;
+    }
+
+    .pricing-table .pricing-plan.premium {
+        right: 33.66666%;
+    }
+}
+
+
+/* end section Pricing Plans/Table  */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -238,6 +308,12 @@ header {
 
 .float-left {
     float: left;
+}
+
+.list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* my Framework end */
