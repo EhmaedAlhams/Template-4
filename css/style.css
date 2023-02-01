@@ -244,6 +244,40 @@ header {
 
 /* end section Pricing Plans/Table  */
 
+/* began section testimonials  */
+
+.testimonials {
+    padding: 50px 0;
+}
+
+.testimonials .head-size {
+    margin: 0 0 35px;
+    color: #555;
+}
+
+.testimonials .box {
+    background-color: #eee;
+    padding: 20px;
+    margin: 0 0 20px;
+    border: 1px solid #DDD;
+}
+
+.testimonials .box:first-of-type {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.testimonials .box:not(:first-of-type) {
+    width: 25%;
+    /* margin: 0; */
+}
+
+.testimonials .a {
+    margin-left: 25%;
+}
+
+/* end section testimonials  */
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     
