@@ -268,13 +268,13 @@ header {
 }
 
 .testimonials .box:not(:first-of-type) {
-    width: 25%;
-    /* margin: 0; */
+    /* width: 25%; */
+    width: 50%;
 }
 
-.testimonials .a {
+/* .testimonials .a {
     margin-left: 25%;
-}
+} */
 
 /* end section testimonials  */
 
