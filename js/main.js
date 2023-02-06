@@ -1,6 +1,5 @@
-let btn = document.querySelector('.btn');
-let works = document.querySelector('.our-works');
-
+let btn = document.querySelector(".btn");
+let works = document.querySelector(".our-works");
 
 btn.onclick = function () {
     // works.classList.toggle('container');
@@ -10,11 +9,11 @@ btn.onclick = function () {
     //     btn.textContent = "Full Screen";
     // }
 
-    if (works.classList.contains('container')) {
+    if (works.classList.contains("container")) {
         btn.textContent = "Default";
-        works.classList.remove('container');
+        works.classList.remove("container");
     } else {
         btn.textContent = "Full Screen";
-        works.classList.add('container');
+        works.classList.add("container");
     }
 };

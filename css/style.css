@@ -371,4 +371,12 @@ header {
 	list-style: none;
 }
 
+img {
+	width: 150px;
+}
+
+.testimonials p {
+	width: calc(100% - 170px);
+	margin-left: 20px;
+}
 /* my Framework end */
