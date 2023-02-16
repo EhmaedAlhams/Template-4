@@ -265,6 +265,7 @@ header {
 	margin: 0 0 20px;
 	border: 1px solid #ddd;
 	text-align: center;
+	border-radius: 6px;
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -301,6 +302,42 @@ header {
 } */
 
 /* end section testimonials  */
+
+/* start section information */
+
+.info {
+	margin-bottom: 30px;
+	padding: 25px;
+	background-color: #ececec;
+	font-size: 30px;
+	line-height: 1.7;
+}
+
+.info .info-list li {
+	display: inline-block;
+	padding: 12px;
+	font-size: 35px;
+	background-color: #DDD;
+	cursor: pointer;
+}
+
+.info .info-list li.selected {
+	background-color: #FFF;
+	color: #666;
+	font-weight: bold;
+}
+
+.info .info-content > div {
+	padding: 10px;
+	background-color: #FFF;
+	line-height: 2;
+}
+
+.info .info-content > div:not(:first-of-type) {
+	display: none;
+}
+/* end section information */
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {}
@@ -376,7 +413,8 @@ img {
 }
 
 .testimonials p {
-	width: calc(100% - 170px);
-	margin-left: 20px;
+	width: calc(100% - 100px);
+	margin-left: 100px;
+	text-align: center;
 }
 /* my Framework end */
