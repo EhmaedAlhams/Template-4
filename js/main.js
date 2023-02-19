@@ -1,9 +1,9 @@
 let btn = document.querySelector(".btn");
 let works = document.querySelector(".our-works");
-let list = Array.from(document.querySelectorAll('.info-list > li'));
+// let list = Array.from(document.querySelectorAll('.info-list > li'));
+let list = document.querySelector('.info-list');
 
-
-// console.log(list);
+// console.log(list[1]);
 btn.onclick = function () {
     // works.classList.toggle('container');
     // if (works.className.includes = "container") {
@@ -21,12 +21,13 @@ btn.onclick = function () {
     }
 };
 
-
-// lis.addEventListener("click", () => {
-//     if (lis.classList.contains("selected")) {
-//         lis.classList.remove('selected');
+// let current = 0;
+// list.addEventListener("click", (event) => {
+//     console.log(event);
+//     if (list.classList.contains("selected")) {
+//         list[current].classList.remove('selected');
 //     } else {
-//         lis.classList.add('selected');
+//         list[current].classList.add('selected');
 //     }
 //     console.log("select");
 // })
@@ -45,14 +46,14 @@ btn.onclick = function () {
 
 
 // Solution 1:
-Array.from(document.querySelectorAll('.info-list > li'), li => li.addEventListener("click", function (event) {
-    if (event.target.classList.contains('selected')) {
-        li.classList.remove('selected');
-        li.className.indexOf(li);
-    } else {
-        li.classList.add('selected');
-    }
-}));
+// Array.from(document.querySelectorAll('.info-list > li'), li => li.addEventListener("click", function (event) {
+//     if (event.target.classList.contains('selected')) {
+//         event.target.classList.remove('selected');
+//     } else {
+//         event.target.classList.add('selected');
+//     }
+//     // console.log(li.c);
+// }));
 
 
 // Solution 2:
@@ -82,3 +83,21 @@ Array.from(document.querySelectorAll('.info-list > li'), li => li.addEventListen
 //         }
 //     });
 // });
+
+
+// [document.querySelector('.a-class'), document.querySelector('.another-class')].forEach(item => {
+//     item.addEventListener('click', event => {
+//         //handle click
+//     })
+// })
+
+function collapse() {
+    let current = 0;
+    list.addEventListener("click", (event) => {
+        list.children[current].classList.remove('selected');
+        current = Array.from(list.children).indexOf(event.target)
+        list.children[current].classList.add('selected');
+    });
+}
+
+collapse();
