@@ -3,14 +3,8 @@ let works = document.querySelector(".our-works");
 // let list = Array.from(document.querySelectorAll('.info-list > li'));
 let list = document.querySelector('.info-list');
 
-// console.log(list[1]);
+
 btn.onclick = function () {
-    // works.classList.toggle('container');
-    // if (works.className.includes = "container") {
-    //     btn.textContent = "Default";
-    // } else {
-    //     btn.textContent = "Full Screen";
-    // }
 
     if (works.classList.contains("container")) {
         btn.textContent = "Default";
@@ -19,7 +13,27 @@ btn.onclick = function () {
         btn.textContent = "Full Screen";
         works.classList.add("container");
     }
+
+    // Other Solution 
+    // works.classList.toggle('container');
+    // if (works.className.includes = "container") {
+    //     btn.textContent = "Default";
+    // } else {
+    //     btn.textContent = "Full Screen";
+    // }
 };
+
+
+function collapse() {
+    let current = 0;
+    list.addEventListener("click", (event) => {
+        list.children[current].classList.remove('selected');
+        current = Array.from(list.children).indexOf(event.target)
+        list.children[current].classList.add('selected');
+    });
+}
+
+collapse();
 
 // let current = 0;
 // list.addEventListener("click", (event) => {
@@ -90,14 +104,3 @@ btn.onclick = function () {
 //         //handle click
 //     })
 // })
-
-function collapse() {
-    let current = 0;
-    list.addEventListener("click", (event) => {
-        list.children[current].classList.remove('selected');
-        current = Array.from(list.children).indexOf(event.target)
-        list.children[current].classList.add('selected');
-    });
-}
-
-collapse();
