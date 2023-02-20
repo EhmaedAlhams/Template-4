@@ -23,17 +23,18 @@ btn.onclick = function () {
     // }
 };
 
-
-function collapse() {
-    let current = 0;
-    list.addEventListener("click", (event) => {
-        list.children[current].classList.remove('selected');
-        current = Array.from(list.children).indexOf(event.target)
-        list.children[current].classList.add('selected');
-    });
+if (list.children.item('li')){
+    // list.children.item("li").addEventListener('click', event => {collapse(event)})
+    console.log(list.children.item('li'));
 }
 
-collapse();
+function collapse(event) {
+    let current = 0;
+    list.children[current].classList.remove('selected');
+    current = Array.from(list.children).indexOf(event.target)
+    list.children[current].classList.add('selected');
+}
+
 
 // let current = 0;
 // list.addEventListener("click", (event) => {
