@@ -3,8 +3,14 @@ let works = document.querySelector(".our-works");
 // let list = Array.from(document.querySelectorAll('.info-list > li'));
 let list = document.querySelector('.info-list');
 
-
+// console.log(list[1]);
 btn.onclick = function () {
+    // works.classList.toggle('container');
+    // if (works.className.includes = "container") {
+    //     btn.textContent = "Default";
+    // } else {
+    //     btn.textContent = "Full Screen";
+    // }
 
     if (works.classList.contains("container")) {
         btn.textContent = "Default";
@@ -13,27 +19,53 @@ btn.onclick = function () {
         btn.textContent = "Full Screen";
         works.classList.add("container");
     }
-
-    // Other Solution 
-    // works.classList.toggle('container');
-    // if (works.className.includes = "container") {
-    //     btn.textContent = "Default";
-    // } else {
-    //     btn.textContent = "Full Screen";
-    // }
 };
 
-if (list.children.item('li')){
-    // list.children.item("li").addEventListener('click', event => {collapse(event)})
-    console.log(list.children.item('li'));
-}
 
-function collapse(event) {
-    let current = 0;
+// FIXME: Soluation right now.
+// function collapse() {
+//     let current = 0;
+//     list.addEventListener("click", (event) => {
+//         list.children[current].classList.remove('selected');
+//         current = Array.from(list.children).indexOf(event.target)
+//         list.children[current].classList.add('selected');
+//     });
+// }
+
+// collapse();
+
+// ========================
+// function collapse() {
+//     // let current = 0;
+//     // // list.addEventListener("click", (event) => {
+
+//     // // });
+//     // list.children[current].addEventListener("click", event => {
+
+//     //     list.children[current].classList.remove('selected');
+//     //     current = Array.from(list.children).indexOf(event.target)
+//     //     list.children[current].classList.add('selected');
+//     // });
+
+// }
+// list.childNodes.item('li').addEventListener("click", event => collapse(event));
+
+// collapse();
+
+current = 1;
+list.children[current].addEventListener("click", event => {
+
+    console.log(Array.from(list.children).indexOf(event.currentTarget));
+
     list.children[current].classList.remove('selected');
-    current = Array.from(list.children).indexOf(event.target)
+    current = Array.from(list.children).indexOf(event.target);
+    console.log(Array.from(list.children).indexOf(event.target));
+
     list.children[current].classList.add('selected');
-}
+    console.log(Array.from(list.children).indexOf(event.target));
+
+});
+
 
 
 // let current = 0;
