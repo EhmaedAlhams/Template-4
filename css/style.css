@@ -319,6 +319,7 @@ header {
 	font-size: 35px;
 	background-color: #DDD;
 	cursor: pointer;
+	transition: 0.4s;
 }
 
 .info .info-list li.selected {

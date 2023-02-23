@@ -1,8 +1,14 @@
 let btn = document.querySelector(".btn");
 let works = document.querySelector(".our-works");
-// let list = Array.from(document.querySelectorAll('.info-list > li'));
-let list = document.querySelector('.info-list');
+let list = Array.from(document.querySelectorAll('.info-list > li'));
+// let list = document.querySelector('.info-list');
 
+// list.forEach((element) => {
+//     element.addEventListener("click", event => {
+//         console.log(element);
+//         console.log(event);
+//     })
+// })
 // console.log(list[1]);
 btn.onclick = function () {
     // works.classList.toggle('container');
@@ -22,7 +28,7 @@ btn.onclick = function () {
 };
 
 
-// FIXME: Soluation right now.
+// FIXME: Solution right now.
 // function collapse() {
 //     let current = 0;
 //     list.addEventListener("click", (event) => {
@@ -52,20 +58,41 @@ btn.onclick = function () {
 
 // collapse();
 
-current = 1;
-list.children[current].addEventListener("click", event => {
+// current = 1;
+// list.children[current].addEventListener("click", event => {
 
-    console.log(Array.from(list.children).indexOf(event.currentTarget));
+//     console.log(Array.from(list.children).indexOf(event.currentTarget));
 
-    list.children[current].classList.remove('selected');
-    current = Array.from(list.children).indexOf(event.target);
-    console.log(Array.from(list.children).indexOf(event.target));
+//     list.children[current].classList.remove('selected');
+//     current = Array.from(list.children).indexOf(event.target);
+//     console.log(Array.from(list.children).indexOf(event.target));
 
-    list.children[current].classList.add('selected');
-    console.log(Array.from(list.children).indexOf(event.target));
+//     list.children[current].classList.add('selected');
+//     console.log(Array.from(list.children).indexOf(event.target));
 
-});
+// });
 
+
+// const tabs = document.querySelectorAll(".info-list > li");
+// // console.log(tabs);
+// for (const tab of tabs) {
+//     let current = 0;
+//     tab.addEventListener("click", (event) => {
+
+
+//         if (tab.matches(".selected")) {
+//             console.log("select matches");
+//             // tab.children[current].classList.remove('selected');
+//             tab.classList.remove('selected');
+//         } else {
+//             console.log("select ");
+//             tab.classList.add('selected');
+//         }
+//         // current = Array.from(tab.children).indexOf(event.target);
+//         // tab.children[current].classList.add('selected');
+//     });
+//     // console.log(tab);
+// }
 
 
 // let current = 0;
@@ -92,18 +119,23 @@ list.children[current].addEventListener("click", event => {
 
 
 
-// Solution 1:
+// SECTION: Solution 1:
 // Array.from(document.querySelectorAll('.info-list > li'), li => li.addEventListener("click", function (event) {
-//     if (event.target.classList.contains('selected')) {
-//         event.target.classList.remove('selected');
+//     console.log(li);
+//     if (li.matches('.selected')) {
+//         // for (let i = 0; i < li.childElementCount; i++){
+//             // }
+//             // li.classList.remove('selected');
+//         event.currentTarget.classList.remove('selected');
 //     } else {
-//         event.target.classList.add('selected');
+//         // event.target.classList.add('selected');
+//         // li.classList.add('selected');
+//         event.currentTarget.classList.add('selected');
 //     }
 //     // console.log(li.c);
 // }));
 
-
-// Solution 2:
+// SECTION: Solution 2:
 // for (const li of document.querySelectorAll('.info-list > li')) {
 //     li.addEventListener("click", (event) => {
 //         // if (li.classList.contains('selected')) {
