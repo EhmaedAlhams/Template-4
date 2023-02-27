@@ -1,6 +1,32 @@
 let btn = document.querySelector(".btn");
 let works = document.querySelector(".our-works");
-let list = Array.from(document.querySelectorAll('.info-list > li'));
+let tabsArr = Array.from(document.querySelectorAll('.info-list > li'));
+let contentArr = Array.from(document.querySelectorAll('.info-content > div'));
+
+tabsArr.forEach((tab) => {
+    tab.addEventListener("click", (element) => {
+
+        // first step 
+        tabsArr.forEach((element) => {
+            element.classList.remove('selected');
+        });
+
+        //second step
+        element.currentTarget.classList.add('selected');
+
+        //third step
+        contentArr.forEach((div) => {
+            div.style.display = "none";
+        })
+
+        document.querySelector(element.currentTarget.dataset.content).style.display = "block";
+    }) 
+})
+
+
+
+
+
 // let list = document.querySelector('.info-list');
 
 // list.forEach((element) => {
