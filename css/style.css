@@ -346,6 +346,34 @@ header {
 
 /* end section information */
 
+/* start section footer  */
+
+.footer {
+	background-color: #333;
+	color: #EEE;
+}
+
+.footer .copyright,
+.footer .design {
+	padding: 20px;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.footer .copyright,
+	.footer .design {
+		width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.footer .copyright,
+	.footer .design {
+		width: 50%;
+	}
+}
+/* end section footer  */
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {}
