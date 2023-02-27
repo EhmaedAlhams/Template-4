@@ -3,39 +3,7 @@ let works = document.querySelector(".our-works");
 let tabsArr = Array.from(document.querySelectorAll('.info-list > li'));
 let contentArr = Array.from(document.querySelectorAll('.info-content > div'));
 
-tabsArr.forEach((tab) => {
-    tab.addEventListener("click", (element) => {
 
-        // first step 
-        tabsArr.forEach((element) => {
-            element.classList.remove('selected');
-        });
-
-        //second step
-        element.currentTarget.classList.add('selected');
-
-        //third step
-        contentArr.forEach((div) => {
-            div.style.display = "none";
-        })
-
-        document.querySelector(element.currentTarget.dataset.content).style.display = "block";
-    }) 
-})
-
-
-
-
-
-// let list = document.querySelector('.info-list');
-
-// list.forEach((element) => {
-//     element.addEventListener("click", event => {
-//         console.log(element);
-//         console.log(event);
-//     })
-// })
-// console.log(list[1]);
 btn.onclick = function () {
     // works.classList.toggle('container');
     // if (works.className.includes = "container") {
@@ -53,6 +21,28 @@ btn.onclick = function () {
     }
 };
 
+// REVIEW: here some feature.. need to review.
+
+tabsArr.forEach((tab) => {
+    tab.addEventListener("click", (element) => {
+
+        // first step 
+        tabsArr.forEach((element) => {
+            element.classList.remove('selected');
+        });
+
+        //second step
+        element.currentTarget.classList.add('selected');
+
+        //third step
+        contentArr.forEach((div) => {
+            div.style.display = "none";
+        })
+
+        document.querySelector(element.currentTarget.dataset.content).style.display = "block";
+    })
+})
+
 
 // FIXME: Solution right now.
 // function collapse() {
@@ -67,6 +57,19 @@ btn.onclick = function () {
 // collapse();
 
 // ========================
+
+
+// let list = document.querySelector('.info-list');
+
+// list.forEach((element) => {
+//     element.addEventListener("click", event => {
+//         console.log(element);
+//         console.log(event);
+//     })
+// })
+// console.log(list[1]);
+
+
 // function collapse() {
 //     // let current = 0;
 //     // // list.addEventListener("click", (event) => {

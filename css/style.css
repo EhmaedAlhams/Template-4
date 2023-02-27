@@ -337,6 +337,13 @@ header {
 .info .info-content > div:not(:first-of-type) {
 	display: none;
 }
+
+@media (max-width: 768px) {
+	.info .info-list li {
+		display: block;
+	}
+}
+
 /* end section information */
 
 
